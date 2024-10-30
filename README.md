@@ -29,6 +29,6 @@ Good luck, and may your investigation be swift and thorough!
 
 ### [Find Ariel](find_Ariel.pcapng)
 
-### For how to solve, check out the answers directory [here](answers)
+### For how to solve, checkout the answers directory [here](answers)
 ### For explanations on how the CTF was made, checkout the MakingCTF directory [here](MakingCTF)
 
