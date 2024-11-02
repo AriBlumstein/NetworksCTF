@@ -6,6 +6,7 @@ Ariel has gone missing! Do you have what it takes to find him? Sniff the packets
 
 #### Prerequisites
 - Understanding in Networks and Operating Systems
+- Python
 - Wireshark
 - SCAPY
 - Windows
