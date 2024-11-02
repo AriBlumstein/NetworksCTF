@@ -8,6 +8,8 @@ Ariel has gone missing! Do you have what it takes to find him? Sniff the packets
 - Understanding in Networks and Operating Systems
 - Wireshark
 - SCAPY
+- Windows
+- WSL
 
 
 ## Backstory
