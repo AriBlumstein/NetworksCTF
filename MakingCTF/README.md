@@ -45,7 +45,7 @@ The server accomplishes the following:
 
 The script that accomplishes this can be found [here](create_cookie_client.py) and is run in the command in the by passing a file as an arguments like so:
 ```cmd
-python python create_cookie_server.py  path\to\main.exe
+python create_cookie_server.py  path\to\main.exe
 ```
 
 NOTE: This script using the module tqdm and must be installed prior to running the script.
