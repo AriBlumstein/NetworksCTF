@@ -45,7 +45,7 @@ python extract_cookie.py path/to/find_Ariel.pcapng
 This script produces a file known as hidden_cookie.txt with the cookie values. Let us now inspect the file. Since the script wrote bytes to the file, it seems we need to use a hex editor to see the contents. Let's do just that:
 ![binary view](../resources/hex_editor.png)
 
-With some knowledge regarding operating systems, we can see that this file is in PE format; it is an executable. We simply need to change the file extension from .txt to .exe. A sample of this rebuilt executable can be found [here](hidden_cookie.exe). Congragulations in completing the first stage!
+With some knowledge regarding operating systems, we can see that this file is in PE format; it is an executable. We simply need to change the file extension from .txt to .exe. A sample of this rebuilt executable can be found [here](hidden_cookie.exe). Congragulations on completing the first stage!
 
 ## Stage 2 - DNS, Socket Programming, TLS certificates
 
@@ -54,6 +54,7 @@ Let's first run the executable and see what happens, the following is outputed t
 
 So our executable seems to be a client trying to send a file to the host student_finder.co.il using port 3000, but it can't because such a server does not exist. Maybe we can build our own server to have the executable sent to us. But how do we get the client connection to be routed to us? Generally the DNS protocol is responsible for mapping domain names to IP addresses. However we see that such a domain does not exist. However before the use of the DNS protocal, the windows operating system has a special file that it checks for host name resolution on the local machine. This file is located at **C:\Windows\System32\drivers\etc\hosts”**. We can update this file ourselves by mapping the the domain to localhost as so:
 ![dns map](../resources/dns_map.png)
+
 (note this can only be done with admin privileges).
 
 Now we can write out own server running on localhost using port 3000 to recieve this file. The Socket library in python provides with ways to make sockets for such a connection. As we slowly build our server and receive and send messages from/to the client, we can see that the there is a 'special' protocol that it is following and we can update the server properly, and restart the client. When we finally recieve the file, we can see that it has the following form:
