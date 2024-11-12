@@ -66,7 +66,7 @@ Though windows provides a nice GUI for viewing certificates, seeing secrets buri
 ```bash
 openssl x509 -in received_certificate.crt -text
 ```
-We are specifying here to the openssl library to show us the x509 certificate from (-in) the file recieved certificate in a human readable format (-text).
+We are specifying here to the openssl library to show us the x509 certificate from (-in) the file recieved_certificate.crt in a human readable format (-text).
 
 Let us see what is displayed:
 ![certificate](../resources/certificate_ssl.png)
@@ -91,7 +91,7 @@ The username (base64 encoded key) is 'TeachersPet' and the password (base64 enco
 **student_finder.co.il?username=TeachersPet&password=The_Best_Student**
 
 We recieve the following page with a 200 success code, indicating we reached the solution
-![query success](../resources/http_query_success)
+![query success](../resources/http_query_success.png)
 
 Seems like Ariel has one more trick up his sleeve. Congragulations on completing stage 3!
 
